@@ -10,7 +10,7 @@ require 'uri'
 # uncommenting it for a dry run.
 
 # wont work without your token
-@token = '{YOUR TOKEN GOES HERE}'
+@token = '{YOUR TOKEN GOES HERE} '
 
 # keep files newer than @months old, 0 will delete everything
 @months = 2
@@ -51,8 +51,5 @@ p total_size / 1024.0 / 1024.0 / 1024.0
 
 # this just collects a list of file ids to delete
 ids = files.map { |file| file['id']}
-
-##############################################
-# uncomment the following line to delete files.
-# delete_files(ids)
+delete_files(ids)
 p 'done'
