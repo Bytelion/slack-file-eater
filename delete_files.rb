@@ -10,7 +10,7 @@ require 'uri'
 # uncommenting it for a dry run.
 
 # wont work without your token
-@token = '<YOUR TOKEN GOES HERE>'
+@token = '{YOUR TOKEN GOES HERE}'
 
 # keep files newer than @months old, 0 will delete everything
 @months = 2

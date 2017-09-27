@@ -8,7 +8,7 @@ has permission to delete.
 # log into slack at slack.com
 # navigate to https://api.slack.com/custom-integrations/legacy-tokens
 # make a new legacy token, should start with 'xoxp-'
-# enter that token in place of <YOUR TOKEN GOES HERE>
+# enter that token in place of "{YOUR TOKEN GOES HERE}"
 
 # be sure to set the month limit!
  - @months is currently set to 2. This will delete all files older than 2 months.
