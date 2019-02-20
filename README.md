@@ -1,4 +1,8 @@
-# slack-file-eater
+<div align="center">
+  <img src="slack_file_eater_logo.png" height="350px">
+  <h3>Slack File Eater</h3>
+  <i>Delicious and nutritious</i>
+</div>
 
 ### Overview
 This is a short Ruby script that deletes files from your slack team.
