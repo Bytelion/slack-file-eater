@@ -10,26 +10,25 @@ require 'uri'
 # uncommenting it for a dry run.
 
 # wont work without your token
-@token = '{YOUR TOKEN GOES HERE} '
+@token = '{YOUR TOKEN GOES HERE}'
 
 # keep files newer than @months old, 0 will delete everything
 @months = 2
 
 def get_file_list
-ts_to = (Time.now - (@months * 30 * 24 * 60 * 60)).to_i
-params = {
-  token: @token,
-  ts_to: ts_to,
-  count: 500
-}
-uri = URI.parse('https://slack.com/api/files.list')
-uri.query = URI.encode_www_form(params)
-response = Net::HTTP.get_response(uri)
-JSON.parse(response.body)['files']
+  ts_to = (Time.now - (@months * 30 * 24 * 60 * 60)).to_i
+  params = {
+    token: @token,
+    ts_to: ts_to,
+    count: 500
+  }
+  uri = URI.parse('https://slack.com/api/files.list')
+  uri.query = URI.encode_www_form(params)
+  response = Net::HTTP.get_response(uri)
+  JSON.parse(response.body)['files']
 end
 
 def delete_files(file_id_list)
-
   file_id_list.each do |id|
     params = {
       token: @token,
